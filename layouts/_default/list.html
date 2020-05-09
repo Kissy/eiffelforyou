@@ -1,0 +1,24 @@
+{{ define "main" }}
+<h1>{{ .Page.Title }}</h1>
+
+<div class="mdc-layout-grid ">
+    <div class="mdc-layout-grid__inner">
+        {{ range .Pages }}
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet">
+            <a class="efy-post-list__item" href="{{.Permalink}}">
+                <div class="efy-post-list__image-aspect-container">
+                    <img class="efy-post-list__image" src="/{{ path.Join "blog" .Params.image }}">
+                </div>
+                <div class="efy-post-list__supporting">
+                    <span class="efy-post-list__label">{{.Date.Format "Jan 2, 2006"}}</span>
+                    <h2 class="mdc-typography--headline5">{{ .Title }}</h2>
+                    <p>{{.Params.summary}}</p>
+                </div>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+    <div class="mdc-layout-grid__inner">
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="{{.Site.LanguageCode}}" dir="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>{{ .Title }}</title>
+    <!-- link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" -->
+    {{ $mdc := resources.Get "css/material-components-web.css" }}
+    {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "targetPath" "assets/css/styles.css" "outputStyle" "nested" "enableSourceMap" .Site.IsServer) }}
+    {{ $css := slice $mdc $styles | resources.Concat "css/style.css" | minify}}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body class="mdc-theme--background mdc-typography">
+<div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+        <aside class="efy-header mdc-drawer mdc-theme--primary-bg mdc-theme--on-primary mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet">
+            <div class="mdc-drawer__header">
+                <img src="{{ .Site.BaseURL }}logo/eiffel-for-you-logo.png" />
+                <div class="mdc-drawer__title">Eiffel for You</div>
+                <div class="mdc-drawer__subtitle">PHOTOGRAPHY</div>
+            </div>
+            {{ partial "drawer-content.html" . }}
+            {{ partial "drawer-footer.html" . }}
+        </aside>
+        <main class="efy-main-content mdc-layout-grid__cell mdc-layout-grid__cell--span-9">
+            {{- block "main" . }}{{- end }}
+        </main>
+        <aside class="efy-footer-phone mdc-drawer mdc-theme--primary-bg mdc-theme--on-primary mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            {{ partial "drawer-content.html" . }}
+            {{ partial "drawer-footer.html" . }}
+        </aside>
+    </div>
+</div>
+</body>
+</html>

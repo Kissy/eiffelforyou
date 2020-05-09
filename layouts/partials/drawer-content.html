@@ -1,0 +1,15 @@
+<div class="mdc-drawer__content">
+    <nav class="mdc-list">
+        {{ range $index, $value := .Site.Menus.main }}
+        {{ if $index }}
+        <hr class="mdc-list-divider">
+        {{ end }}
+        <a class="mdc-list-item {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}efy-list-item--active{{end}}" href="{{ .URL }}" title="{{ .Title }}">
+            <i class="mdc-list-item__graphic">
+                {{ readFile (print "assets/logo/" ( .Identifier ) ".svg") | safeHTML }}
+            </i>
+            <span class="mdc-list-item__text">{{ .Name }}</span>
+        </a>
+        {{ end }}
+    </nav>
+</div>

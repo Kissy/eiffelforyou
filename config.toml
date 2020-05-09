@@ -1,0 +1,34 @@
+baseURL = "http://eiffelforyou.com/"
+languageCode = "en-us"
+title = "Eiffel for You"
+publishDir = "docs"
+enableRobotsTXT = true
+SectionPagesMenu = "main"
+copyright = "2020 — Heather DiGraci"
+
+[build]
+  writeStats = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "gallery"
+    name = "Gallery"
+    title = "Gallery"
+    url = "/gallery/"
+    weight = 2
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    title = "Blog"
+    url = "/blog/"
+    weight = 3
+
+[params]
+  instagram = "https://www.instagram.com/stories/jet.set.heather/"
+  facebook = "https://www.facebook.com/heather.stoneking.3"
