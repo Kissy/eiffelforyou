@@ -76,6 +76,8 @@ body > .mdc-layout-grid > .mdc-layout-grid__inner {
 }
 .mdc-drawer__footer .mdc-drawer__social a {
   color: $goldColor;
+  font-size: 0;
+  line-height: 0;
 }
 .mdc-drawer__footer .mdc-drawer__social svg {
   width: 22px;
