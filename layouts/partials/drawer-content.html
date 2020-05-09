@@ -4,7 +4,9 @@
         {{ if $index }}
         <hr class="mdc-list-divider">
         {{ end }}
-        <a class="mdc-list-item {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}efy-list-item--active{{end}}" href="{{ .URL }}" title="{{ .Title }}">
+        {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+        {{ $active = or $active (eq .URL $.RelPermalink)}}
+        <a class="mdc-list-item {{ if $active }}efy-list-item--active{{ end }}" href="{{ .URL }}" title="{{ .Title }}">
             <i class="mdc-list-item__graphic">
                 {{ readFile (print "assets/logo/" ( .Identifier ) ".svg") | safeHTML }}
             </i>
