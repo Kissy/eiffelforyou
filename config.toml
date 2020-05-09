@@ -6,9 +6,6 @@ enableRobotsTXT = true
 SectionPagesMenu = "main"
 copyright = "2020 — Heather DiGraci"
 
-[build]
-  writeStats = true
-
 [menu]
   [[menu.main]]
     identifier = "about"
