@@ -1,6 +1,6 @@
 baseURL = "http://eiffelforyou.com/"
 languageCode = "en-us"
-title = "Eiffel for You"
+title = "Photography"
 publishDir = "docs"
 enableRobotsTXT = true
 SectionPagesMenu = "main"
@@ -27,5 +27,7 @@ copyright = "2020 — Heather DiGraci"
     weight = 3
 
 [params]
+  keywords = "photography, photoshoot, florida, usa"
+  description = "Charming and professional photographer in Florida and Washington!"
   instagram = "https://www.instagram.com/stories/jet.set.heather/"
   facebook = "https://www.facebook.com/heather.stoneking.3"

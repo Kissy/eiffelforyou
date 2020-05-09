@@ -3,7 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"/>
-    <title>{{ .Title }}</title>
+    <meta name=description content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="keyword" content="{{ .Site.Params.keywords }}" />
+    <title>Eiffel for You — {{ .Title }}</title>
     {{ $mdc := resources.Get "css/material-components-web.css" }}
     {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "targetPath" "assets/css/styles.css" "outputStyle" "nested" "enableSourceMap" .Site.IsServer) }}
     {{ $css := slice $mdc $styles | resources.Concat "css/style.css" | minify}}
