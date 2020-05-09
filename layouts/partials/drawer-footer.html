@@ -1,7 +1,7 @@
 <div class="mdc-drawer__footer">
     <div class="mdc-drawer__social">
-        <a href="{{ .Site.Params.instagram }}" target="_blank">{{ readFile "assets/logo/instagram.svg" | safeHTML }}</a>
-        <a href="{{ .Site.Params.facebook }}" target="_blank">{{ readFile "assets/logo/facebook.svg" | safeHTML }}</a>
+        <a href="{{ .Site.Params.instagram }}" rel="noopener" target="_blank">{{ readFile "assets/logo/instagram.svg" | safeHTML }}</a>
+        <a href="{{ .Site.Params.facebook }}" rel="noopener" target="_blank">{{ readFile "assets/logo/facebook.svg" | safeHTML }}</a>
     </div>
     <p class="mdc-drawer__credits">{{ .Site.Copyright }}</p>
 </div>
