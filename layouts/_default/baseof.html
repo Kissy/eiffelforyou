@@ -4,12 +4,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>{{ .Title }}</title>
-    <!-- link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" -->
     {{ $mdc := resources.Get "css/material-components-web.css" }}
     {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "targetPath" "assets/css/styles.css" "outputStyle" "nested" "enableSourceMap" .Site.IsServer) }}
     {{ $css := slice $mdc $styles | resources.Concat "css/style.css" | minify}}
     <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4258818-10"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-4258818-10');
+    </script>
 </head>
 <body class="mdc-theme--background mdc-typography">
 <div class="mdc-layout-grid">
