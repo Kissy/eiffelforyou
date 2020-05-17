@@ -1,6 +1,14 @@
 {{ define "main" }}
-<p class="efy-about-me">
-	A thing that you see in my pictures is that I was not afraid to fall in love with these people.<br />
-	Taking pictures is like tiptoeing into the kitchen late at night and stealing Oreo cookies.
-</p>
+<p class="efy-about-me__catchphrase">&laquo; {{ .Params.catchphrase }} &raquo;</p>
+
+<div class="mdc-layout-grid ">
+	<div class="mdc-layout-grid__inner">
+		<div class="efy-about-me__text mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-6">
+			{{ .Content }}
+		</div>
+		<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+			<img class="efy-about-me__image" src="/img/about.png" alt="About Me">
+		</div>
+	</div>
+</div>
 {{ end }}

@@ -3,9 +3,8 @@
 {{ end }}
 {{ define "main" }}
 <div class="efy-blog-entry-content">
-    <img src="/{{ path.Join "blog" .Page.Params.image }}" alt="{{ .Title }}">
-    <span>{{.Date.Format "Jan 2, 2006"}}</span>
-    <h1 class="mdc-typography--headline4">{{ .Title }}</h1>
+    <img class="efy-blog-entry-content__image" src="/{{ path.Join "blog" .Page.Params.image }}" alt="{{ .Title }}">
+    <h1 class="efy-blog-entry-content__title mdc-typography--headline4">{{ .Title }} <span class="efy-blog-entry-content__date">{{.Date.Format "Jan 2, 2006"}}</span></h1>
     {{ .Content }}
 </div>
 {{ end }}

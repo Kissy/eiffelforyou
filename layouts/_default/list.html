@@ -10,9 +10,8 @@
                     <img class="efy-post-list__image" alt="{{ .Title }}" src="/{{ path.Join "blog" .Params.image }}">
                 </div>
                 <div class="efy-post-list__supporting">
-                    <span class="efy-post-list__label">{{.Date.Format "Jan 2, 2006"}}</span>
-                    <h2 class="mdc-typography--headline5">{{ .Title }}</h2>
-                    <p>{{.Params.summary}}</p>
+                    <h2 class="efy-post-list__title mdc-typography--headline5">{{ .Title }}<span class="efy-post-list__date">{{.Date.Format "Jan 2, 2006"}}</span></h2>
+                    <p class="efy-post-list__summary">{{.Params.summary}}</p>
                 </div>
             </a>
         </div>

@@ -21,8 +21,8 @@ copyright = "2020 — Heather DiGraci"
     weight = 2
   [[menu.main]]
     identifier = "blog"
-    name = "Blog"
-    title = "Blog"
+    name = "Stories"
+    title = "Stories"
     url = "/blog/"
     weight = 3
 

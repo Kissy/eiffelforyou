@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photoshoot Stories on Photography</title>
-    <link>http://eiffelforyou.com/blog/</link>
+    <link>http://eiffelforyou.com/stories/</link>
     <description>Recent content in Photoshoot Stories on Photography</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 — Heather DiGraci</copyright>
     <lastBuildDate>Sat, 02 May 2020 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="http://eiffelforyou.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://eiffelforyou.com/stories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Photo with Alexis</title>
-      <link>http://eiffelforyou.com/blog/afternoon-photo-alexis/</link>
+      <link>http://eiffelforyou.com/stories/afternoon-photo-alexis/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
       
-      <guid>http://eiffelforyou.com/blog/afternoon-photo-alexis/</guid>
+      <guid>http://eiffelforyou.com/stories/afternoon-photo-alexis/</guid>
       <description>Follow my journey through this new blog.</description>
     </item>
     
     <item>
       <title>Flower field photo</title>
-      <link>http://eiffelforyou.com/blog/flower-field-photo/</link>
+      <link>http://eiffelforyou.com/stories/flower-field-photo/</link>
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0200</pubDate>
       
-      <guid>http://eiffelforyou.com/blog/flower-field-photo/</guid>
+      <guid>http://eiffelforyou.com/stories/flower-field-photo/</guid>
       <description>Hello, I am heather and I like to take pictures of me in flower fields.</description>
     </item>
     
